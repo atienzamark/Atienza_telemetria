@@ -20,4 +20,22 @@ foreach($ping_prezzi as $key => $value) {
     }
 }
 
+$somma_ping = 0;
+$count = 0;
+$ping_minimo = null;
+$ping_massimo = null;
+
+foreach($ping_validi as $ping) {
+    $somma_ping += $ping;
+    $count++;
+
+    if($ping < $ping_minimo) {
+        $ping_minimo = $ping;
+    }
+
+    if($ping > $ping_massimo) {
+        $ping_massimo = $ping;
+    }
+}
+
 ?>
